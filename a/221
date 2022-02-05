@@ -1,0 +1,42 @@
+#define SIZE  25
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main() {
+    int num,count=1;
+    char no;
+    char ans1[SIZE], ans2[SIZE];
+    char ans3[SIZE];
+    scanf("%d", &num);
+    no = getchar();
+    while (num >= count) {
+      
+        int x = 0,y=0;
+        while (ans1[x]=getchar()) {
+            if (ans1[x] == '\n') {
+                ans1[x] = NULL;
+                ans3[y] = NULL;
+                break;
+            }
+            else if (ans1[x] != ' ') {
+                ans3[y] = ans1[x];
+                y++;
+            }
+            x++;
+        }
+        x = 0;
+        while (ans2[x] = getchar() ) {
+            if (ans2[x] == '\n') {
+                ans2[x] = NULL;
+                break;
+            }
+            x++;
+        }
+        printf("Case %d: ", count);
+        if (strcmp(ans1, ans2) == 0)printf("Yes\n");
+        else if ((strcmp(ans3, ans2) == 0))printf("Output Format Error\n");
+        else printf("Wrong Answer\n");
+        count++;
+    }
+    return 0;
+}
