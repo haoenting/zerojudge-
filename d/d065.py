@@ -1,8 +1,9 @@
 ary = input()
 ans = ary.split()
-max = int(ans[0])
-if int(ans[1]) >max:
-    max = int(ans[1])
-if int(ans[2]) >max:
-    max = int(ans[2])
-print(max)       
+ans = list(map(int,ans))
+max = ans[0]
+if ans[1] >max:
+    max = ans[1]
+if ans[2] >max:
+    max = ans[2]
+print(max)    
