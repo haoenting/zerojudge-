@@ -1,0 +1,26 @@
+import sys
+
+def student(num):
+    xary,yary,total = list(),list(),list()
+
+    ary = list(map(int,input().split( )))
+   # print(ary)
+    for i in range(0,num*2,2):
+        xary.append(ary[i])
+        yary.append(ary[i+1])
+    #print(xary,yary,sep ='\n')
+    for j in range(num-1):
+        for k in range(j+1,num):
+            sum = (xary[j] - xary[k])**2 + (yary[j] - yary[k])**2
+            sum **= 0.5
+            total.append(sum+0.00005)
+
+    print('%.4f'%min(total),'\n')
+
+
+
+for line in sys.stdin:
+    N,M = input().split( )
+    print(line)
+    student(int(M))
+    str = input()
