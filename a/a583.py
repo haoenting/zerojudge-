@@ -11,20 +11,15 @@ def student(num):
         for k in range(j+1,num):
             sum = (xary[j] - xary[k])**2 + (yary[j] - yary[k])**2
             sum **= 0.5
-            total.append(sum+0.00005)
+            S = sum * 100000
+            if S % 10 > 5:
+                sum += 0.00005
+            total.append(sum)
+            
     print('%.4f'%min(total),'\n')
 
-count = 1
 for line in sys.stdin:
-    if count == 1:
-        out = list(line)
-        out[1] = '出'
-        for i in range(len(out)):
-            print(out[i],end='')    
-    elif count == 2:
-        N,M = line.split( )
-        student(int(M))
-        
-    else:
-        count = 0
-    count += 1
+    N,M = line.split( )
+    student(int(M))
+
+#忽略題目的輸入範例那一行字
