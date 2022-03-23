@@ -16,6 +16,6 @@ def exceed():
     count = 0
     for line in sys.stdin:
         count += 1
-    print("ALL Over. Exceeded", count, "lines !")
+    print("All Over. Exceeded", count, "lines!")
 
 run()
