@@ -1,0 +1,21 @@
+import sys
+
+def run():
+    bool = True
+    while bool != False:
+        x,y = input().split()
+        x = int(x)
+        y = int(y)
+        if x == 0 and y == 0:
+            exceed()
+            bool = False
+        else:
+            print(x**y)
+
+def exceed():
+    count = 0
+    for line in sys.stdin:
+        count += 1
+    print("ALL Over. Exceeded", count, "lines !")
+
+run()
