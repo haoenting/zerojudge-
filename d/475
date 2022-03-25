@@ -19,3 +19,4 @@ def exceed():
     print("All Over. Exceeded", count, "lines!")
 
 run()
+# 不知道哪裡有錯 原作很久沒上線
