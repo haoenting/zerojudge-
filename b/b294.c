@@ -1,15 +1,13 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 int main() {
-    int day, sum = 0,buy;
-    scanf("%d", &day);
-    for (int x = 1; x <= day; x++) {
-        scanf("%d", &buy);
-        sum += buy * x;
-    }
-    printf("%d", sum);
-    //system("pause");
-    return 0;
+	int n;
+	scanf("%d", &n);
+	int sum = 0,k;
+	for (int x = 1; x <= n; x++) {
+		scanf("%d", &k);
+		sum += k * x;
+	}
+	printf("%d", sum);
+	return 0;
 }
